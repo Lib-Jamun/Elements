@@ -27,6 +27,7 @@ dependencies {
     implementation 'tk.jamun.ui:scanner:0.0.1'
     implementation 'tk.jamun.elements:circularimageview:0.0.1'
     implementation 'tk.jamun.elements:circularnetworkimageview:0.0.1'
+
 //    implementation 'tk.jamun.elements:elements:0.0.1'
 //    implementation 'tk.jamun.ui:calendar:0.0.1'
 //    implementation 'tk.jamun.ui:gallery:0.0.1'
