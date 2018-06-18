@@ -2,19 +2,18 @@
 
 Elements Library provide you a custom set of Android Elements that have custom views and properties. 
 
-1. `CircularImageView` 
+1. `CircularImageView` is a custom android element of ImageView with circular shape. It also provide you border properties with three custom calls like border, width and overlays.
 
-2. `CircularNetworkImageView` 
+2. `CircularNetworkImageView` is a another custom android element class which extend volley NetworkImageView and provide circular shape. It also provide you border properties with three custom calls like border, width and overlays. And the most important feature can be able to cache your image just like NetworkImageView do.
 
+Both can be accessible with the help of Java class calls and via xml. Both can handle vectors easily and can be used in Glide and in Download image.
 
 ### What's New? (0.0.1)
 
 * Stable official Version for Rapid Development.
-* Custom UI components with Single and Multi Selection Mode in Country and Language Pickers.
-* Easy Calling mechanism with instant reply via Listeners
-* Optimized code with Api integration for Country Picker for Flags Images
-* Country and Language Pickers have four modes you can optout from these Four mode (i.e. Bottom Sheet, Dialog, Activity, Navigation View)
-* All the views in the library are Screen compatible i.e. You can execute this library on different android screens including tabs.
+* Custom UI function to provide circular shapes.
+* Easy Calling mechanism with vector handling features.
+* Can enhance your view using Border feature.
 
 ### Quality Measures? for (0.0.1)
 
@@ -31,11 +30,10 @@ The following apps are using this library without facing any kind of Bugs.
 
 # Why this library?
 
-* This library Pickers competible with all screen sizes and device (Tab with 7' inches and 10'inches).
-* Library support both orientation that is portrait and landscape.
+* This Elements don't have any compatibilty and OS version Issues.
+* Elements support both orientation that is portrait and landscape.
 * Its simple and easy to use.
-* Its Customizable (Support Custom Themes). 
-* Minimum API is 15, but it'll probably work in API 9 and above, just make sure you test it out (we use `Support Fragment Manager`).  
+* Its Customizable with both xml and java code functions calls. 
 
 ### All-in-One Setup
 
@@ -74,43 +72,11 @@ dependencies {
 ```
 ------
 
-# Types of Pickers
+# Types of Elements
 
-## Utility Pickers
+## CircularNetworkImageView
 
-
-#### Gradle Setup
-
-Step 1\. Add the jCenter repository to your build file. Add it in your root build.gradle at the end of repositories:
-
-```java
-allprojects {
-  repositories {
-        mavenCentral()
-  }
-}
-```
-Step 2\. Add the dependency
-
-```java
-dependencies {
-        compile 'tk.jamun.elements:circularimageview:0.0.1'
-}
-```
-#### Maven
-```xml
-<dependency>
-  <groupId>tk.jamun.elements</groupId>
-  <artifactId>circularimageview</artifactId>
-  <version>0.0.1</version>
-  <type>aar</type>
-</dependency>
-```
-
-
-## Country-Pickers
-
-`Country Pickers` 
+This element provide you Google volley NetworkImageView in a circular shape, with border color features. Simple ways to add this into your project by adding : 
 
 #### Gradle Setup
 
@@ -140,18 +106,119 @@ dependencies {
 </dependency>
 ```
 
+
+## CircularImageView
+
+This element provide you Android ImageView in a circular shape, with border color features. Simple ways to add this into your project by adding : 
+
+#### Gradle Setup
+
+Step 1\. Add the jCenter repository to your build file. Add it in your root build.gradle at the end of repositories:
+
+```java
+allprojects {
+  repositories {
+        mavenCentral()
+  }
+}
+```
+Step 2\. Add the dependency
+
+```java
+dependencies {
+        compile 'tk.jamun.elements:circularimageview:0.0.1'
+}
+```
+
+#### Maven
+
+```xml
+<dependency>
+  <groupId>tk.jamun.elements</groupId>
+  <artifactId>circularimageview</artifactId>
+  <version>0.0.1</version>
+  <type>aar</type>
+</dependency>
+```
+
 # How to Implement
 
 Once the project has been added to gradle, You can use these lines of code to configure pickers....
 
-## 1.
+## 1. Using XML
 
-**1. **
+XML example explain you implementation of CircularImageView and CircularNetworkImageView :  
 
 ```
-```
-------
+// CircularNetworkImageView
 
+<tk.jamun.elements.circularnetworkimageview.CircularNetworkImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="vector drawable"
+                        android:src="normal drawables"
+                       />
+
+//OR CircularImageView
+
+<tk.jamun.elements.circularimageview.CircularImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="vector drawable"
+                        android:src="normal drawables"
+                        android:scaleType="centerCrop"// Only centerCrop is available
+                      //  android:adjustViewBounds="" // Not available
+                       />
+
+
+```
+
+Implement Border and there properties : 
+
+XML example explain you implementation of CircularImageView and CircularNetworkImageView :  
+
+```
+                        app:library_border_color="color"
+                        app:library_border_width="dimen in dp"
+                        app:library_border_overlay="true or false"
+                        
+```
+
+## 2. Using Java Code
+
+JAVA example explain you implementation of CircularImageView and CircularNetworkImageView :  
+
+First CircularNetworkImageView class : 
+```     
+        CircularNetworkImageView circularNetworkImageView = new CircularNetworkImageView(getContext());
+        circularNetworkImageView.setBorderColor(); // to set border color
+        circularNetworkImageView.setBorderColorResource(); // to set color resource directlu
+        circularNetworkImageView.setBorderOverlay(); // set overlay true and false
+        circularNetworkImageView.setBorderWidth(); // border width
+        circularNetworkImageView.setColorFilter(); // color filter options
+        circularNetworkImageView.setImageBitmap(); // Set image as bitmap
+        circularNetworkImageView.setImageDrawable();// Set image as Drawable
+        circularNetworkImageView.setImageResource();// Set image as Resource
+        circularNetworkImageView.setImageURI();// Set image as UrI
+        circularNetworkImageView.setScaleType();// Set image ScaleType only centerCrop
+```
+
+First CircularImageView class : 
+```     
+        CircularImageView circularImageView = new CircularImageView(getContext());
+        circularImageView.setBorderColor(); // to set border color
+        circularImageView.setBorderColorResource(); // to set color resource directlu
+        circularImageView.setBorderOverlay(); // set overlay true and false
+        circularImageView.setBorderWidth(); // border width
+        circularImageView.setColorFilter(); // color filter options
+        circularImageView.setImageBitmap(); // Set image as bitmap
+        circularImageView.setImageDrawable();// Set image as Drawable
+        circularImageView.setImageResource();// Set image as Resource
+        circularImageView.setImageURI();// Set image as UrI
+        circularImageView.setScaleType();// Set image ScaleType only centerCrop
+```
+
+>**Note : AdjustBound Not Available in this. and in ScaleType only centerCrop**
 
 > **To understand more how the library works, please take a look at the sample app.**
 
