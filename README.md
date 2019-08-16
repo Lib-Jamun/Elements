@@ -8,26 +8,29 @@ Elements Library provide you a custom set of Android Elements that have custom v
 
 Both can be accessible with the help of Java class calls and via xml. Both can handle vectors easily and can be used in Glide and in Download image.
 
-### What's New? (0.0.1)
+### What's New? {Latest Version}
 
 * Stable official Version for Rapid Development.
 * Custom UI function to provide circular shapes.
 * Easy Calling mechanism with vector handling features.
 * Can enhance your view using Border feature.
 
-### Quality Measures? for (0.0.1)
+### Quality Measures? for{Latest Version}
 
 The following apps are using this library without facing any kind of Bugs.
 
 * **[SimplyBlood](https://play.google.com/store/apps/details?id=com.simplyblood)**
 * **[ZINI](https://play.google.com/store/apps/details?id=ai.zini)**,
-* **[Jumboo](https://play.google.com/store/apps/details?id=ai.jumboo)**
-* **[USEonRENT](https://play.google.com/store/apps/details?id=com.useonrent)**
-* **[Wall-E](https://play.google.com/store/apps/details?id=ai.hdwallpapers)**
-* **[SaveBloodIndia](https://play.google.com/store/apps/details?id=com.savebloodindia)**
-* **[Rectangle India](https://play.google.com/store/apps/details?id=com.rectangleindia.blooddonation)**
-* **[Jeevan Rakshak](https://play.google.com/store/apps/details?id=com.jeevanrakshak)**
+* **[RentalBazar](https://play.google.com/store/apps/details?id=com.rentalbazaar)** 
+* **[DoubtCrusher](https://play.google.com/store/apps/details?id=com.doubtcrusher)**
+* **[BookAGround](https://play.google.com/store/apps/details?id=com.bookaground)**
+* **[PeyFree](https://play.google.com/store/apps/details?id=com.peyfree)**
+* **[ClueRace](https://play.google.com/store/apps/details?id=com.cluerace)**
+* **[CIS-Connect In Single](https://play.google.com/store/apps/details?id=com.connectinsingle)**
+* **[QR/Barcode Scanner](https://play.google.com/store/apps/details?id=com.scanner.android)** 
+* **[Wall-E](https://play.google.com/store/apps/details?id=com.walle.android)**
 
+------
 # Why this library?
 
 * This Elements don't have any compatibilty and OS version Issues.
@@ -54,9 +57,22 @@ allprojects {
 }
 ```
 Step 2\. Add the dependency
-```java
+```
+Latest Version : 0.0.8
+
+Android
 dependencies {
-        compile 'tk.jamun.elements:elements:0.0.1'
+     compile 'tk.jamun.elements:elements:{Latest Version}'
+}
+
+AndroidX
+dependencies {
+     compile 'tk.jamunx.elements:elements:{Latest Version}'
+}
+
+Kotlin
+dependencies {
+     compile 'tk.jamun-ktx.elements:elements:{Latest Version}'
 }
 ```
 
@@ -64,9 +80,14 @@ dependencies {
 
 ```xml
 <dependency>
-  <groupId>tk.jamun.elements</groupId>
-  <artifactId>elements</artifactId>
-  <version>0.0.1</version>
+ Android
+  <groupId>tk.jamun.ui</groupId>
+AndroidX
+  <groupId>tk.jamunx.ui</groupId>
+Kotlin
+  <groupId>tk.jamun-ktx.ui</groupId>
+ <artifactId>elements</artifactId>
+  <version>{Latest Version}</version>
   <type>aar</type>
 </dependency>
 ```
@@ -92,16 +113,35 @@ allprojects {
 Step 2\. Add the dependency
 
 ```java
+Latest Version : 0.0.8
+
+Android
 dependencies {
-        compile 'tk.jamun.elements:circularnetworkimageview:0.0.1'
+     compile 'tk.jamun.elements:circularnetworkimageview:{Latest Version}'
+}
+
+AndroidX
+dependencies {
+     compile 'tk.jamunx.elements:circularnetworkimageview:{Latest Version}'
+}
+
+Kotlin
+dependencies {
+     compile 'tk.jamun-ktx.elements:circularnetworkimageview:{Latest Version}'
 }
 ```
 #### Maven
 ```xml
 <dependency>
-  <groupId>tk.jamun.elements</groupId>
+ Android
+  <groupId>tk.jamun.ui</groupId>
+AndroidX
+  <groupId>tk.jamunx.ui</groupId>
+Kotlin
+  <groupId>tk.jamun-ktx.ui</groupId>
+  <version>{Latest Version}</version>
+  <type>aar</type>
   <artifactId>circularnetworkimageview</artifactId>
-  <version>0.0.1</version>
   <type>aar</type>
 </dependency>
 ```
@@ -125,18 +165,35 @@ allprojects {
 Step 2\. Add the dependency
 
 ```java
+Android
 dependencies {
-        compile 'tk.jamun.elements:circularimageview:0.0.1'
+     compile 'tk.jamun.elements:circularimageview:{Latest Version}'
 }
+
+AndroidX
+dependencies {
+     compile 'tk.jamunx.elements:circularimageview:{Latest Version}'
+}
+
+Kotlin
+dependencies {
+     compile 'tk.jamun-ktx.elements:circularimageview:{Latest Version}'
+}
+
 ```
 
 #### Maven
 
 ```xml
 <dependency>
-  <groupId>tk.jamun.elements</groupId>
+  Android
+  <groupId>tk.jamun.ui</groupId>
+AndroidX
+  <groupId>tk.jamunx.ui</groupId>
+Kotlin
+  <groupId>tk.jamun-ktx.ui</groupId>
+  <version>{Latest Version}</version>
   <artifactId>circularimageview</artifactId>
-  <version>0.0.1</version>
   <type>aar</type>
 </dependency>
 ```
@@ -232,7 +289,7 @@ First CircularImageView class :
 ## Credits
 
 Desgin & Developed by : **[Jatin Sahgal](https://www.linkedin.com/in/jatinsahgal/)**
- (**[Linkedin](https://www.linkedin.com/in/jatinsahgal/)** & **[Website](https://blog.jamun.tk)**) 
+ (**[Linkedin](https://www.linkedin.com/in/jatinsahgal/)** & **[Website](http://androidcodelab.com/)** & **[Github](https://github.com/Lib-Jamun)**) 
 
 ## More Library under Jamun 
 * **[Pickers](https://github.com/Lib-Jamun/Pickers.git)**
